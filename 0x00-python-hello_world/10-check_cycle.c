@@ -10,6 +10,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *tmp, *head;
 
+	if (list == NULL)
+		return (0);
+
 	tmp = list;
 	head = list;
 
