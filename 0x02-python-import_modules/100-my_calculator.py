@@ -7,12 +7,12 @@ if __name__ == "__main__":
     operators = {"+": add, "-": sub, "*": mul, "/": div}
     length = len(argv) - 1
     if (length < 3):
-        printf("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    a = int(argv(1))
-    b = int(argv(3))
-    op = argv(2)
+    a = int(argv[1])
+    b = int(argv[3])
+    op = argv[2]
 
     if op not in operators:
         print("Unknown operator. Available operators: +, -, * and /")
