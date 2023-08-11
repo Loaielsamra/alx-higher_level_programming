@@ -1,1 +1,1 @@
-This is a repository for all ALX python tasks
+My journey of exploring and learning Python
