@@ -10,7 +10,7 @@ if __name__ == "__main__":
     if (length - 1 >= 0):
         punc = ":"
 
-    print("{} {}{}".format(length, arg, punc))
+    print("{} {}{}".format(length, arg, punc,))
 
     for index, arg in enumerate(argv):
         if (index > 0):
