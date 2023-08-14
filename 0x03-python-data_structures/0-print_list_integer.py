@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-def print_list_integer(my_list = []):
+def print_list_integer(my_list=[]):
     if my_list:
-        my_list.reverse
-        for i in my_list:
-            print("{:d}".format(i))
+        for e in my_list:
+            print("{:d}".format(e))
