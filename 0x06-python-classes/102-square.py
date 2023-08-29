@@ -31,32 +31,37 @@ class Square:
             returns current square's area
             '''
         return self.__size * self.__size
-    
+
     def __le__(self, other):
         '''
             less than or equal <=
             '''
         return(self.area() <= other.area())
+
     def __lt__(self, other):
         '''
             less than <
             '''
         return(self.area() < other.area())
+
     def __gt__(self, other):
         '''
             greater than >
             '''
         return(self.area() > other.area())
+
     def __gl__(self, other):
         '''
             greater than or equal
             '''
         return(slef.area() >= other.rea())
+
     def __eq__(self, other):
         '''
             equal to ==
             '''
         return(self.area() == other.area())
+
     def __ne__(self, other):
         '''
             not equal to !=
