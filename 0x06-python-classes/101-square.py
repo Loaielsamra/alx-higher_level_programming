@@ -58,5 +58,9 @@ class Square:
             return
         for spaces in range(self.__position[1]):
             print()
-        for h in range(self.__size):
+        for h in range(self.__size - 1):
             print("{}{}".format(" " * self.__position[0], "#" * self.__size))
+        return "{}{}".format(" " * self.__position[0], "#" * self.__size)
+
+    def __str__(self):
+        return self.my_print()
