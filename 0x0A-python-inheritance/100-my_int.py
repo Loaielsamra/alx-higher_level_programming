@@ -3,6 +3,7 @@
 
 
 class MyInt(int):
+    """class itself"""
 
     def __ne__(self, other):
         """switch != with =="""
