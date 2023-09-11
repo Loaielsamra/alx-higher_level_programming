@@ -2,6 +2,7 @@
 """Module containing Rectangle class"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+
 class Rectangle(BaseGeometry):
     """Rectangle classs that inherits from BaseGeometry class"""
     def __init__(self, width, height):
