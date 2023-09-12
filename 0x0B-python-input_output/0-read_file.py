@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """Reads file `filename` and prints it to standard ouput"""
     with open(filename, r, encoding="utf-8") in f:
-        print("{}".format(f), end="")
+        print(f, end="")
