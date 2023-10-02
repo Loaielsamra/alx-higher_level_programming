@@ -10,9 +10,13 @@ class Rectangle:
 
         self.width = width
         self.height = height
+
     @property
     def width(self):
+        """returns private width attribute"""
+
         return self.__width
+
     @width.setter
     def width(self, val):
         """Checks for width attribute"""
@@ -22,9 +26,13 @@ class Rectangle:
         if val < 0:
             raise ValueError("width must be >= 0")
         self.__width = val
+
     @property
     def height(self):
+        """returns height attribute"""
+
         return self.__height
+
     @height.setter
     def height(self, val):
         """Checks ofr height attribute"""
@@ -62,5 +70,5 @@ class Rectangle:
         """Returns official string representation"""
 
         rectangle = "{}({},{})".format(self.__class__.__name__,
-                                        self.__width, self.__height)
+                                       self.__width, self.__height)
         return rectangle
