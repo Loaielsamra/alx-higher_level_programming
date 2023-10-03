@@ -74,5 +74,5 @@ class Rectangle:
         """Returns official string representation"""
 
         rectangle = "{}({}, {})".format(self.__class__.__name__,
-                                       self.__width, self.__height)
+                                        self.__width, self.__height)
         return rectangle
