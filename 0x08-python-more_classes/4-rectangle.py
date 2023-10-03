@@ -73,6 +73,6 @@ class Rectangle:
     def __repr__(self):
         """Returns official string representation"""
 
-        rectangle = "{}({},{})".format(self.__class__.__name__,
+        rectangle = "{}({}, {})".format(self.__class__.__name__,
                                        self.__width, self.__height)
         return rectangle
