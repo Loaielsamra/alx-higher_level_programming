@@ -1,4 +1,4 @@
-#!/sur/bin/python3
+#!/usr/bin/python3
 """Module containing to_json_string function"""
 import json
 
