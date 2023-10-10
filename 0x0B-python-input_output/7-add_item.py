@@ -10,13 +10,14 @@ def add_item(args, filename):
 
     try:
         toadd = load_from_json(filename)
-    except:
+    except Exception:
         toadd = []
 
     for item in args:
         toadd.append(item)
 
     save_to_json(toadd, filename)
+
 
 if __name__ == "__main__":
     args = sys.argv[1:]
