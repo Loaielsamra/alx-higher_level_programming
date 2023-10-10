@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module containign pascla_triangle function"""
 
+
 def pascal_triangle(n):
     '''
         Creates a pascal triangle
