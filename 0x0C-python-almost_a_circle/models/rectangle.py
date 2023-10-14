@@ -25,10 +25,7 @@ class Rectangle(Base):
     def width(self, value):
         """Validates width attribute"""
 
-        if type(value) != int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
+        self.variablevalidator("width", value)
         self.__width = value
 
     @property
@@ -41,10 +38,7 @@ class Rectangle(Base):
     def height(self, value):
         """Validates height attribute"""
 
-        if type(value) != int:
-            raise TypeError("height must be an integer")
-        if value <= 0:
-            raise ValueError("height must be > 0")
+        self.variablevalidator("height", value)
         self.__height = value
 
     @property
@@ -57,10 +51,7 @@ class Rectangle(Base):
     def x(self, value):
         """Validates x attribute"""
 
-        if type(value) != int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        self.variablevalidator("x", value)
         self.__x = value
 
     @property
@@ -73,10 +64,7 @@ class Rectangle(Base):
     def y(self, value):
         """Validates y attribute"""
 
-        if type(value) != int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        self.variablevalidator("y", value)
         self.__y = value
 
     def area(self):
@@ -88,7 +76,7 @@ class Rectangle(Base):
         """prints rectangle instance with #"""
 
         rectangle =""
-        for i in range(self.__y - 1):
+        for i in range(self.__y):
             rectangle += '\n'
         for i in range(self.__height - 1):
             rectangle += " "*self.__x + "#"*self.__width + '\n'
@@ -100,3 +88,38 @@ class Rectangle(Base):
 
         return "Rectangle ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y,
                                                      self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """assigns an argument to each attribute"""
+    
+        if args:
+            attributes = {"id", "width", "height", "x", "y"}
+            for i, arg in enumerate(args):
+                setattr(self, attribute[i], args)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """returns dictionary representation of instance"""
+
+        return {"x": getattr(self, "x"),
+                "y": getattr(self, "y"),
+                "id": getattr(self, "id"),
+                "height": getattr(self, "height"),
+                "width": getattr(self, "width")
+                }
+
+    @staticmethod
+    def variablevalidator(varname, value):
+        """Validates variables"""
+
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(varname))
+        if varname == "width" or varname == "height":
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(varname))
+        if varname == "x" or varname == "y":
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(varname))
