@@ -11,7 +11,7 @@ class Base:
     def __init__(self, id=None):
         """Initializes Base class instance"""
 
-        if id != None:
+        if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -34,7 +34,7 @@ class Base:
                 jdict = json.loads(cls.to_json_string(item))
                 towrite.append(jdict)
 
-        with open(filename, 'w', encoding = "utf-8") as f:
+        with open(filename, 'w', encoding="utf-8") as f:
             json.dump(towrite, f)
 
     @staticmethod
@@ -44,7 +44,7 @@ class Base:
 
         if len(json_string) == 0 or json_string is None:
             return []
-        
+
         return json.loads(json_string)
 
     @classmethod
@@ -70,7 +70,7 @@ class Base:
 
         with open(filename, 'r', encoding="utf-8") as f:
             readfromfile = cls.from_json_string(f.read())
-    
+
         instances = []
         for item in readfromfile:
             temp = cls.create(**item)

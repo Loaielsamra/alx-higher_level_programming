@@ -75,7 +75,7 @@ class Rectangle(Base):
     def display(self):
         """prints rectangle instance with #"""
 
-        rectangle =""
+        rectangle = ""
         for i in range(self.__y):
             rectangle += '\n'
         for i in range(self.__height - 1):
@@ -86,12 +86,14 @@ class Rectangle(Base):
     def __str__(self):
         """Overrides the str method"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y,
-                                                     self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.__x, self.__y,
+                                                       self.__width,
+                                                       self.__height)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
-    
+
         if args:
             attributes = ["id", "width", "height", "x", "y"]
             for i, arg in enumerate(args):
