@@ -1,2 +1,2 @@
--- Displays all records where score >= 0
-SELECT score, name FROM second_table WHERE score>=0 ORDER BY score DESC;
+-- Displays all records where score >= 10 in desc order
+SELECT score, name FROM second_table WHERE score>=10 ORDER BY score DESC;
