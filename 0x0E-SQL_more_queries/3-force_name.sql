@@ -1,0 +1,1 @@
+-- Creates table 'force_name'
