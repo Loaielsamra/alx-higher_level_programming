@@ -5,6 +5,7 @@ if __name__=="__main__":
     from urllib import request
 
     with request.urlopen('https://alx-intranet.hbtn.io/status') as fetched:
+        print("Body response:")
         content = fetched.read()
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
