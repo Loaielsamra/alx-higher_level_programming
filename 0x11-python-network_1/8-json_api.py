@@ -16,7 +16,7 @@ if __name__ == "__main__":
     content = resp.json()
 
     try:
-        if content:
+        if content != {}:
             print("[{}] {}".format(content.get("id"), content.get("name")))
         else:
             print("No result")
