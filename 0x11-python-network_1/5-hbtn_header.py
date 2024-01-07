@@ -5,7 +5,7 @@ displays the value of the variable X-Request-Id in the response header
 
 if __name__ == "__main__":
     import sys
-    import responses
+    import requests
 
-    resp = responses.get(sys.argv[1])
-    print(resp.header.get("X-Request-Id"))
+    resp = requests.get(sys.argv[1])
+    print(resp.headers.get("X-Request-Id"))
