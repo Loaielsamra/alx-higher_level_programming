@@ -1,12 +1,13 @@
 #!/usr/bin/node
 
 const args = process.argv;
-let numMax = 0, secMax = 0;
+let numMax = 0;
+let secMax = 0;
 
 if (args.length < 4) {
   console.log('0');
 } else {
-  let numargs = [];
+  const numargs = [];
 
   for (let i = 2; i < args.length; i++) {
     numargs.push(parseInt(args[i]));

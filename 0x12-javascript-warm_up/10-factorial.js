@@ -4,8 +4,7 @@ const arg = process.argv;
 
 function factorial (a) {
   if (isNaN(a)) {
-    console.log('1');
-    return;
+    return (1);
   }
 
   if (a === 1) {
